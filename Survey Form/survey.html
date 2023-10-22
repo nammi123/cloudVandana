@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css">
+    <link rel="shortcut icon" href="https://i0.wp.com/cloudvandana.com/wp-content/uploads/2021/04/logo.png?w=2048&ssl=1" type="image/x-icon">
+</head>
+<body>
+	<!-- <h1>Survey Form</h1> -->
+    <fieldset>
+    <legend class="area-name">Survey Form </legend>
+	<form id="form">
+		<div class="form-control">
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" placeholder="Enter your first name" />
+		</div>
+
+        <div class="form-control">
+			<label for="lname">Last Name</label>
+			<input type="text"id="lname" placeholder="Enter your last name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email">Email</label>
+			<input type="email"id="email" placeholder="Enter your email" />
+		</div>
+		<div class="form-control">
+			<label for="dob">DOB</label>
+			<input type="date"id="dob"/>
+		</div>
+
+		<div class="form-control">
+			<label for="country">Country</label>
+			<select name="country" id="country">
+                <option value="" selected disabled>Select your Country</option>
+				<option value="0">India</option>
+				<option value="1">USA</option>
+				<option value="2">Germany</option>
+				<option value="3">Canada</option>
+			</select>
+		</div>
+		<div class="form-control">
+			<label name="gender" >Gender</label>
+			<label for="male">
+			<input type="checkbox"id="male" name="male">Male</input>
+			</label>
+			<label for="female">
+				<input type="checkbox"id="female" name="female">Female</input>
+			</label>
+			<label for="other">
+				<input type="checkbox"
+					id="other"
+					name="other">other</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label for="profession">Profession </label>
+			<input type="text" id="profession" placeholder="Enter your Profession">
+		</div>
+
+		<div class="form-control">
+			<label for="mob">Mobile Number</label>
+            <input type="tel"  id="mobile" placeholder="Enter your Mobile Number">
+		</div>
+		<button type="submit" value="submit" id="submit" onclick="submitForm()">Submit</button>
+        <button type="reset" value="reset" id="reset" onclick="resetForm()">Reset</button>
+	</form>
+</fieldset>
+<div id="popup" class="popup">
+    <h2>Submitted Form</h2>
+    <p id="popupContent"></p>
+    <button onclick="closePopup()">Close</button>
+</div>
+        <script src="survey.js"></script>
+</body>
+</html>
